@@ -3,6 +3,7 @@ import 'package:shop_app/constants.dart';
 import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/screens/components/Categories.dart';
 import 'package:shop_app/screens/components/item_card.dart';
+import 'package:shop_app/screens/detalis/details_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -36,13 +37,13 @@ class Body extends StatelessWidget {
               ),
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
-                // press: () => Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       builder: (context) => DetailsScreen(
-                //         product: products[index],
-                //       ),
-                //     )),
+                press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                        product: products[index],
+                      ),
+                    )),
               ),
             ),
           ),
