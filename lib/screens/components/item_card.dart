@@ -29,7 +29,12 @@ class ItemCard extends StatelessWidget {
                   Radius.circular(16),
                 ),
               ),
-              child: Image.asset(product.image),
+              child: Hero(
+                tag: "${product.id}",
+                child: Image.asset(
+                  product.image,
+                ),
+              ),
             ),
           ),
           Padding(
